@@ -1,0 +1,12 @@
+{
+  "name": "yafcf",
+  "version": "0.0.1",
+  "description": "yet another functional css framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node node_modules/.bin/stylus lib/yafcf.styl -o dist/"
+  },
+  "author": "Adilson Schmitt Junior <adilsonschj@gmail.com>",
+  "license": "MIT"
+}

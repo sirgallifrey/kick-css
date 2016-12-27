@@ -1,0 +1,55 @@
+cellNames = '.gc'
+cellSizeNames = ('.gc-1-12' '.gc-2-12' '.gc-3-12' '.gc-4-12' '.gc-5-12' '.gc-6-12' '.gc-7-12' '.gc-8-12' '.gc-9-12' '.gc-10-12' '.gc-11-12')
+
+box-sizing(v) {
+    -webkit-box-sizing: v;
+    -moz-box-sizing: v;
+    box-sizing: v;
+}
+
+.gr, .gc, .gr:after, .gc:after, .gr:before, .gc:before {
+  box-sizing(border-box)
+}
+
+/* Clearfix */
+.gr {
+  *zoom: 1;
+}
+.gr:before, .gr:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.gr:after {
+  clear: both;
+}
+
+.gr {
+  /* ul/li compatibility */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nested grid */
+.gr > .gr {
+  clear: none;
+  float: left;
+  /*TODO: check if this is necessary */
+  margin: 0 !important;
+}
+
+/* Default gc */
+.gc {
+  float: left;
+  width: 100%;
+}
+
+for i in range(1, 11, 1)
+    .gc-{i}-12 {
+        float: left;
+        width (i/12 * 100)%
+        &, &:before, &:after {
+            box-sizing(border-box)
+        }
+    }

@@ -1,0 +1,159 @@
+.gr,
+.gc,
+.gr:after,
+.gc:after,
+.gr:before,
+.gc:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gr {
+  *zoom: 1;
+}
+.gr:before,
+.gr:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.gr:after {
+  clear: both;
+}
+.gr {
+/* ul/li compatibility */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.gr > .gr {
+  clear: none;
+  float: left;
+/*TODO: check if this is necessary */
+  margin: 0 !important;
+}
+.gc {
+  float: left;
+  width: 100%;
+}
+.gc-1-12 {
+  float: left;
+  width: 8.333333333333332%;
+}
+.gc-1-12,
+.gc-1-12:before,
+.gc-1-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-2-12 {
+  float: left;
+  width: 16.666666666666664%;
+}
+.gc-2-12,
+.gc-2-12:before,
+.gc-2-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-3-12 {
+  float: left;
+  width: 25%;
+}
+.gc-3-12,
+.gc-3-12:before,
+.gc-3-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-4-12 {
+  float: left;
+  width: 33.33333333333333%;
+}
+.gc-4-12,
+.gc-4-12:before,
+.gc-4-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-5-12 {
+  float: left;
+  width: 41.66666666666667%;
+}
+.gc-5-12,
+.gc-5-12:before,
+.gc-5-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-6-12 {
+  float: left;
+  width: 50%;
+}
+.gc-6-12,
+.gc-6-12:before,
+.gc-6-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-7-12 {
+  float: left;
+  width: 58.333333333333336%;
+}
+.gc-7-12,
+.gc-7-12:before,
+.gc-7-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-8-12 {
+  float: left;
+  width: 66.66666666666666%;
+}
+.gc-8-12,
+.gc-8-12:before,
+.gc-8-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-9-12 {
+  float: left;
+  width: 75%;
+}
+.gc-9-12,
+.gc-9-12:before,
+.gc-9-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-10-12 {
+  float: left;
+  width: 83.33333333333334%;
+}
+.gc-10-12,
+.gc-10-12:before,
+.gc-10-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gc-11-12 {
+  float: left;
+  width: 91.66666666666666%;
+}
+.gc-11-12,
+.gc-11-12:before,
+.gc-11-12:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
