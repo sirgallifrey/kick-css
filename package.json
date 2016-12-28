@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node node_modules/.bin/stylus lib/yafcf.styl -o dist/"
+    "build": "node node_modules/.bin/node-sass --output-style compressed lib/yafcf.scss dist/yafcf.css"
   },
   "author": "Adilson Schmitt Junior <adilsonschj@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.1.1"
+  }
 }

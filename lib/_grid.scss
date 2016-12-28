@@ -1,0 +1,78 @@
+@mixin box-sizing($v) {
+  -webkit-box-sizing: $v;
+  -moz-box-sizing: $v;
+  box-sizing: $v;
+}
+
+.gr, .gc, .gr:after, .gc:after, .gr:before, .gc:before {
+  @include box-sizing(border-box);
+}
+
+/* Clearfix */
+.gr {
+  *zoom: 1;
+}
+.gr:before, .gr:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.gr:after {
+  clear: both;
+}
+
+.gr {
+  /* ul/li compatibility */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nested grid */
+.gr > .gr {
+  clear: none;
+  float: left;
+  /*TODO: check if this is necessary */
+  margin: 0 !important;
+}
+
+/* Default gc */
+.gc {
+  float: left;
+  width: 100%;
+}
+
+[class*='gc-'] {
+  float: left;
+  width: 100%;
+}
+
+[class*='gc-'], [class*='gc-']:before, [class*='gc-']:after {
+  @include box-sizing(border-box);
+}
+
+@mixin grid-cell($sizeName) {
+
+  @for $i from 1 through 12 {
+    .gc-#{$sizeName}-#{$i} {
+      width:  $i / 12 * 100%;
+    }
+  }
+}
+
+$names: '';
+
+@for $i from 1 through 12 {
+  $names: $names + '.gc-#{$i},.gc-#{$i}:before, .gc-#{$i}:after,';
+  .gc-#{$i} {
+    width: $i / 12 * 100%;
+  }
+}
+@each $bp, $size in $breakpoints {
+  @for $i from 1 through 12 {
+    $names: $names + '.gc-#{$bp}-#{$i},.gc-#{$bp}-#{$i}:before, .gc-#{$bp}-#{$i}:after,';
+    @media screen and (min-width: $size + 0px) {
+      @include grid-cell($bp);
+    }
+  }
+}

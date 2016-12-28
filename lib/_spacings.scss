@@ -1,0 +1,10 @@
+@each $n, $size in $spacings {
+  .p-#{$n} {
+    padding: $size + 0px;
+  }
+  @each $side, $name in $sides {
+    .p#{$side}-#{$n} {
+      padding-#{$name}: $size + 0px;
+    }
+  }
+}
