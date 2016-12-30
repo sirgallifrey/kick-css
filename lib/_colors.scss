@@ -1,0 +1,5 @@
+@each $name, $color in $colors {
+  .txt-#{$name} {
+      color: $color;
+  }
+}

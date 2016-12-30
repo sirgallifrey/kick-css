@@ -55,22 +55,18 @@
 
   @for $i from 1 through 12 {
     .gc-#{$sizeName}-#{$i} {
-      width:  $i / 12 * 100%;
+      max-width:  $i / 12 * 100%;
     }
   }
 }
 
-$names: '';
-
 @for $i from 1 through 12 {
-  $names: $names + '.gc-#{$i},.gc-#{$i}:before, .gc-#{$i}:after,';
   .gc-#{$i} {
-    width: $i / 12 * 100%;
+    max-width: $i / 12 * 100%;
   }
 }
 @each $bp, $size in $breakpoints {
   @for $i from 1 through 12 {
-    $names: $names + '.gc-#{$bp}-#{$i},.gc-#{$bp}-#{$i}:before, .gc-#{$bp}-#{$i}:after,';
     @media screen and (min-width: $size + 0px) {
       @include grid-cell($bp);
     }

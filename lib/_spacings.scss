@@ -8,3 +8,29 @@
     }
   }
 }
+
+@each $n, $size in $spacings {
+  .m-#{$n} {
+    padding: $size + 0px;
+  }
+  @each $side, $name in $sides {
+    .m#{$side}-#{$n} {
+      padding-#{$name}: $size + 0px;
+    }
+  }
+}
+
+@each $n, $size in $spacings {
+  .m--#{$n} {
+    padding: $size * -1px;
+  }
+  @each $side, $name in $sides {
+    .m#{$side}--#{$n} {
+      padding-#{$name}: $size * -1px;
+    }
+  }
+}
+
+.m-auto {
+    margin: auto;
+}
