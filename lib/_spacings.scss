@@ -1,32 +1,32 @@
 @each $n, $size in $spacings {
   .p-#{$n} {
-    padding: $size + 0px;
+    padding: toRem($size);
   }
   @each $side, $name in $sides {
     .p#{$side}-#{$n} {
-      padding-#{$name}: $size + 0px;
+      padding-#{$name}: toRem($size);
     }
   }
 }
 
 @each $n, $size in $spacings {
   .m-#{$n} {
-    padding: $size + 0px;
+    margin: $size + 0px;
   }
   @each $side, $name in $sides {
     .m#{$side}-#{$n} {
-      padding-#{$name}: $size + 0px;
+      margin-#{$name}: $size + 0px;
     }
   }
 }
 
 @each $n, $size in $spacings {
   .m--#{$n} {
-    padding: $size * -1px;
+    margin: $size * -1px;
   }
   @each $side, $name in $sides {
     .m#{$side}--#{$n} {
-      padding-#{$name}: $size * -1px;
+      margin-#{$name}: $size * -1px;
     }
   }
 }

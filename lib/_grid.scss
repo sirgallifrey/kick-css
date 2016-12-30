@@ -55,20 +55,18 @@
 
   @for $i from 1 through 12 {
     .gc-#{$sizeName}-#{$i} {
-      max-width:  $i / 12 * 100%;
+      width:  $i / 12 * 100%;
     }
   }
 }
 
 @for $i from 1 through 12 {
   .gc-#{$i} {
-    max-width: $i / 12 * 100%;
+    width: $i / 12 * 100%;
   }
 }
 @each $bp, $size in $breakpoints {
-  @for $i from 1 through 12 {
     @media screen and (min-width: $size + 0px) {
-      @include grid-cell($bp);
+        @include grid-cell($bp);
     }
-  }
 }
