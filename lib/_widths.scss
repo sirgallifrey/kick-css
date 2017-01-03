@@ -1,5 +1,17 @@
 @each $n, $size in $widths {
   .w-#{$n} {
-      width: $size + 0px;
+      width: toRemOrPercentage($size);
+  }
+}
+
+@each $n, $size in $widths {
+  .w-min-#{$n} {
+      min-width: toRemOrPercentage($size);
+  }
+}
+
+@each $n, $size in $widths {
+  .w-max-#{$n} {
+      max-width: toRemOrPercentage($size);
   }
 }

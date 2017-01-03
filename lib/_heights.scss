@@ -1,0 +1,17 @@
+@each $n, $size in $heights {
+  .h-#{$n} {
+      height: toRemOrPercentage($size);
+  }
+}
+
+@each $n, $size in $heights {
+  .h-min-#{$n} {
+      min-height: toRemOrPercentage($size);
+  }
+}
+
+@each $n, $size in $heights {
+  .h-max-#{$n} {
+      max-height: toRemOrPercentage($size);
+  }
+}

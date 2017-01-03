@@ -2,3 +2,11 @@
     $remSize: $size / 16;
     @return ($remSize * 1rem);
 }
+
+@function toRemOrPercentage($size) {
+	@if unit($size) == '%' {
+		@return $size;
+	}
+    $remSize: $size / 16;
+    @return ($remSize * 1rem);
+}
