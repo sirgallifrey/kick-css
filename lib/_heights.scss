@@ -1,17 +1,32 @@
-@each $n, $size in $heights {
-  .h-#{$n} {
-      height: toRemOrPercentage($size);
-  }
+@mixin makeHeightClasses($breakpoint: '') {
+	@if $breakpoint != '' {
+		$breakpoint: '#{$breakpoint}-';
+	}
+	@each $n, $size in $heights {
+	  .h-#{$breakpoint}#{$n} {
+	      height: toRemOrPercentage($size);
+	  }
+	}
+
+	@each $n, $size in $heights {
+	  .h-#{$breakpoint}min-#{$n} {
+	      min-height: toRemOrPercentage($size);
+	  }
+	}
+
+	@each $n, $size in $heights {
+	  .h-#{$breakpoint}max-#{$n} {
+	      max-height: toRemOrPercentage($size);
+	  }
+	}
 }
 
-@each $n, $size in $heights {
-  .h-min-#{$n} {
-      min-height: toRemOrPercentage($size);
-  }
-}
+@include makeHeightClasses();
 
-@each $n, $size in $heights {
-  .h-max-#{$n} {
-      max-height: toRemOrPercentage($size);
-  }
+@if $applyHeightsToBreakpoints == true {
+	@each $bp, $size in $breakpoints {
+	    @media screen and (min-width: $size + 0px) {
+	        @include makeHeightClasses($bp);
+	    }
+	}
 }

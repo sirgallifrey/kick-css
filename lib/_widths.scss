@@ -1,17 +1,32 @@
-@each $n, $size in $widths {
-  .w-#{$n} {
-      width: toRemOrPercentage($size);
-  }
+@mixin makeWidthClasses($breakpoint: '') {
+	@if $breakpoint != '' {
+		$breakpoint: '#{$breakpoint}-';
+	}
+	@each $n, $size in $widths {
+	  .w-#{$breakpoint}#{$n} {
+	      width: toRemOrPercentage($size);
+	  }
+	}
+
+	@each $n, $size in $widths {
+	  .w-#{$breakpoint}min-#{$n} {
+	      min-width: toRemOrPercentage($size);
+	  }
+	}
+
+	@each $n, $size in $widths {
+	  .w-#{$breakpoint}max-#{$n} {
+	      max-width: toRemOrPercentage($size);
+	  }
+	}
 }
 
-@each $n, $size in $widths {
-  .w-min-#{$n} {
-      min-width: toRemOrPercentage($size);
-  }
-}
+@include makeWidthClasses();
 
-@each $n, $size in $widths {
-  .w-max-#{$n} {
-      max-width: toRemOrPercentage($size);
-  }
+@if $applyWidthsToBreakpoints == true {
+	@each $bp, $size in $breakpoints {
+	    @media screen and (min-width: $size + 0px) {
+	        @include makeWidthClasses($bp);
+	    }
+	}
 }

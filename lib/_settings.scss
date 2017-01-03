@@ -43,6 +43,8 @@ $widths: (
     '100-p': 100%
 );
 
+$applyWidthsToBreakpoints: true;
+
 $heights: (
     1: 80,
     2: 160,
@@ -70,6 +72,8 @@ $heights: (
     24: 1920,
     '100-p': 100%
 );
+
+$applyHeightsToBreakpoints: true;
 
 $colors: (
     'dark-red': #e7040f,
