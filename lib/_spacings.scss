@@ -34,3 +34,11 @@
 .m-auto {
     margin: auto;
 }
+
+@each $n, $size in $spacings {
+  @each $side, $name in $sides {
+    .#{$side}-#{$n} {
+      #{$name}: toRem($size);
+    }
+  }
+}
