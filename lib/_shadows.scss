@@ -1,0 +1,5 @@
+@each $n, $shadow in $shadows {
+    .s-#{$n} {
+        box-shadow: $shadow;
+    }
+}
