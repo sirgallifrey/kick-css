@@ -2663,16 +2663,26 @@
     max-height: 100%; } }
 
 .s-1 {
-  box-shadow: 0 3px 5px 0 #919191; }
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .s-2 {
-  box-shadow: 0 3px 5px 3px #919191; }
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
 
 .s-3 {
-  box-shadow: 0 3px 12px 6px #919191; }
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3); }
 
 .s-4 {
-  box-shadow: 0 3px 5px 0 #919191; }
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3); }
 
 .s-5 {
-  box-shadow: 0 8px 24px 12px #919191; }
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3); }
+
+@keyframes from_no_shadow {
+  from {
+    box-shadow: 0 0 0 0 transparent; } }
+
+.s-on-hover:not(:hover) {
+  box-shadow: 0 0 0 0 transparent; }
+
+.s-on-hover:hover {
+  animation: from_no_shadow 0.3s; }
