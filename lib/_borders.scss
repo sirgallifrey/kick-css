@@ -1,0 +1,33 @@
+.border-solid {
+    border-style: solid;
+}
+
+@each $n, $size in $spacings {
+  .border-#{$n} {
+    border-width: $n + 0px;
+  }
+  @each $side, $name in $sides {
+    .border-#{$side}-#{$n} {
+      border-#{$name}-width: $size + 0px;
+    }
+  }
+}
+
+@each $cname, $color in $colors {
+  .border-#{$cname} {
+      border-color: $color;
+  }
+  @each $side, $name in $sides {
+    .border-#{$side}-#{$cname} {
+      border-#{$name}-color: $color;
+    }
+  }
+  .border-#{$cname}-darker {
+      border-color: darken($color, 5%);
+  }
+  @each $side, $name in $sides {
+    .border-#{$side}-#{$cname}-darker {
+      border-#{$name}-color: darken($color, 5%);
+    }
+  }
+}

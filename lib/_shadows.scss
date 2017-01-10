@@ -1,20 +1,19 @@
 
 
 @each $n, $shadow in $shadows {
-    .s-#{$n} {
+    .shadow-#{$n} {
+        box-shadow: $shadow;
+    }
+
+    .shadow-#{$n}-on-hover:hover {
         box-shadow: $shadow;
     }
 }
 
+.shadow-animate {
+    transition: box-shadow .5s ease-in-out;
+}
+
 @keyframes from_no_shadow {
     from { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) }
-}
-
-.s-on-hover:not(:hover) {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.s-on-hover:hover {
-
-    animation: from_no_shadow 0.3s;
 }
