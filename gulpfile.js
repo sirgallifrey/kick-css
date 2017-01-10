@@ -29,7 +29,7 @@ const scssglobs = [
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "./exemples"
+        server: ['./exemples', './dist']
     });
 
     gulp.watch(src.scss, ['sass']);
