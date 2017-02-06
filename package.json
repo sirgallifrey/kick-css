@@ -1,7 +1,7 @@
 {
   "name": "kick-css",
-  "version": "0.0.1",
-  "description": "yet another functional css lib",
+  "version": "0.0.16",
+  "description": "yet another functional css toolkit",
   "scripts": {
     "build": "node node_modules/.bin/gulp",
     "start": "node node_modules/.bin/gulp serve"

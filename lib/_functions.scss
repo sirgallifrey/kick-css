@@ -10,3 +10,10 @@
     $remSize: $size / 16;
     @return ($remSize * 1rem);
 }
+
+@function toPixelOrPercentage($size) {
+	@if unit($size) == '%' {
+		@return $size;
+	}
+    @return ($size * 1px);
+}

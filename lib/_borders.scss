@@ -2,13 +2,25 @@
     border-style: solid;
 }
 
-@each $n, $size in $spacings {
+@each $n, $size in $borderWidths {
   .border-#{$n} {
-    border-width: $n + 0px;
+    border-width: toPixelOrPercentage($size);
   }
   @each $side, $name in $sides {
     .border-#{$side}-#{$n} {
-      border-#{$name}-width: $size + 0px;
+      border-#{$name}-width: toPixelOrPercentage($size);
+    }
+  }
+}
+
+
+@each $n, $size in $borderRadius {
+  .border-radius-#{$n} {
+    border-radius: toPixelOrPercentage($size);
+  }
+  @each $corner, $name in $corners {
+    .border-radius-#{$corner}-#{$n} {
+      border-#{$name}-width: toPixelOrPercentage($size);
     }
   }
 }

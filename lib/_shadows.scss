@@ -10,8 +10,18 @@
     }
 }
 
+@each $n, $shadow in $shadowsInset {
+    .shadow-inset-#{$n} {
+        box-shadow: $shadow;
+    }
+
+    .shadow-inset-#{$n}-on-hover:hover {
+        box-shadow: $shadow;
+    }
+}
+
 .shadow-animate {
-    transition: box-shadow .5s ease-in-out;
+    transition: box-shadow $shadowAnimationTime ease-in-out;
 }
 
 @keyframes from_no_shadow {
