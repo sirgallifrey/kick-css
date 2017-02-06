@@ -4,4 +4,4 @@ This css toolkit is havely based on [tachyons](https://github.com/tachyons-css/t
 
 Kick-css aims to be used both as an stand alone solution (which can be customized) and as a base to be extended by others.
 
-It is currently on it's early stages, so use with care. Contributions are welcome :)
+It is currently on it's early stages and it is unstable until v1.0.0, use with care. Contributions are welcome :)
